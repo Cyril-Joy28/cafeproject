@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Reservation</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --page-bg: #f5ebe4;
+      --white-card: #ffffff;
+      --inner-form-bg: #f5ebe4;
+      --input-bg: #ede0d4;
+      --accent-brown: #b06d51;
+      --divider-line: #d2b4a0;
+    }
+
+    body {
+      background-color: var(--page-bg);
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .book-a-table { padding: 60px 0; }
+
+    .form-white-wrapper {
+      background: var(--white-card);
+      border-radius: 30px;
+      padding: 15px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+    }
+
+    .reservation-form-section {
+      padding: 40px;
+      background: var(--inner-form-bg);
+      border-radius: 20px;
+      border-right: 2.5px solid var(--divider-line);
+    }
+
+    .reservation-info-section {
+      padding: 15px 30px;
+    }
+
+    .form-control, .form-select {
+      background-color: var(--input-bg);
+      border: none;
+      border-radius: 12px;
+      padding: 14px;
+      margin-bottom: 5px;
+    }
+
+    .btn-reserve {
+      background: var(--accent-brown);
+      color: #fff;
+      font-weight: 600;
+      padding: 15px;
+      border: none;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+    }
+
+    .btn-reserve:hover {
+      background: #8e5641;
+      transform: translateY(-2px);
+    }
+
+    .hero-image {
+      border-radius: 20px;
+      overflow: hidden;
+      position: relative;
+      margin-bottom: 25px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      transition: transform 0.8s ease;
+    }
+
+    .info-card {
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 25px 20px;
+      transition: all 0.4s ease;
+      border: 1px solid #f0e6e0;
+      height: 100%;
+    }
+
+    .info-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+      border-color: var(--accent-brown);
+    }
+
+    .card-icon {
+      width: 45px;
+      height: 45px;
+      background: var(--accent-brown);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 15px;
+    }
+
+    @media (max-width: 991px) {
+      .reservation-form-section {
+        border-right: none;
+        border-bottom: 2.5px solid var(--divider-line);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section id="book-a-table" class="book-a-table">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+
+        <div class="col-lg-5">
+          <div class="form-white-wrapper">
+            <div class="reservation-form-section">
+              <div class="form-header text-center mb-4">
+                <h3 style="font-family: 'Playfair Display';">Make a Reservation</h3>
+                <p class="text-muted small">Join us for an unforgettable culinary journey.</p>
+              </div>
+
+              <form action="/book/" method="post">
+                {% csrf_token %}
+                <div class="row gy-3">
+                  <div class="col-12"><input type="text" name="nam" class="form-control" placeholder="Full Name" required></div>
+                  <div class="col-12"><input type="email" name="mail" class="form-control" placeholder="Email Address" required></div>
+                  <div class="col-12"><input type="tel" name="phon" class="form-control" placeholder="Phone Number" required></div>
+
+                  <div class="col-6"><input type="date" name="date" class="form-control" required></div>
+                  <div class="col-6"><input type="time" name="time" class="form-control" required></div>
+
+                  <div class="col-6">
+                    <select name="seating" class="form-select" required>
+                      <option value="" selected disabled>Seating Area</option>
+                      <option value="Indoor Main Hall">Indoor Main Hall</option>
+                      <option value="Terrace Garden">Terrace Garden</option>
+                      <option value="Private Booth">Private Booth</option>
+                      <option value="Window Side">Window Side</option>
+                      <option value="Bar Seating">Bar Seating</option>
+                    </select>
+                  </div>
+                  <div class="col-6">
+                    <select name="people" class="form-select" required>
+                      <option value="" selected disabled>Guests</option>
+                      <option value="1">1 Guest</option>
+                      <option value="2">2 Guests</option>
+                      <option value="3">3 Guests</option>
+                      <option value="4">4 Guests</option>
+                      <option value="5">5+ Guests</option>
+                    </select>
+                  </div>
+
+                  <div class="col-12">
+                    <select name="occasion" class="form-select">
+                      <option value="" selected disabled>Occasion</option>
+                      <option value="birthday">Birthday</option>
+                      <option value="anniversary">Anniversary</option>
+                      <option value="business">Business Dinner</option>
+                      <option value="date">Date Night</option>
+                      <option value="celebration">Celebration</option>
+                    </select>
+                  </div>
+
+                  <div class="col-12">
+                    <textarea class="form-control" name="message" rows="3" placeholder="Special requests..."></textarea>
+                  </div>
+                </div>
+
+                <button type="submit" class="btn-reserve w-100 mt-4">
+                  <i class="bi bi-calendar-check me-2"></i> Reserve Table
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-7">
+          <div class="reservation-info-section">
+            <div class="hero-image">
+              <img src="{% static 'assets/img/restaurant/showcase-2.webp' %}" alt="Dining">
+              <div style="position: absolute; bottom: 20px; left: 20px; color: white;">
+                <h4 style="font-family: 'Playfair Display';">Experience Fine Dining</h4>
+                <p class="small mb-0">Discover a world of flavors curated by our chefs.</p>
+              </div>
+            </div>
+
+            <div class="info-cards">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <div class="info-card">
+                    <div class="card-icon"><i class="bi bi-clock"></i></div>
+                    <h6>Business Hours</h6>
+                    <p class="small text-muted mb-0">Tue - Sat: 5:00 PM - 11:00 PM</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="info-card">
+                    <div class="card-icon"><i class="bi bi-geo-alt"></i></div>
+                    <h6>Find Us</h6>
+                    <p class="small text-muted mb-0">4567 Elm Avenue, Chicago</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="info-card">
+                    <div class="card-icon"><i class="bi bi-telephone"></i></div>
+                    <h6>Reservations</h6>
+                    <p class="small text-muted mb-0">+1 (312) 555-9876</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="info-card">
+                    <div class="card-icon"><i class="bi bi-envelope"></i></div>
+                    <h6>Email Us</h6>
+                    <p class="small text-muted mb-0">info@restaurant.com</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

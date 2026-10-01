@@ -1,0 +1,185 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+  :root {
+    --bg-light-blue: #b8d4e3; /* Matching the background in your images */
+    --card-blue: #c9dce9;     /* The soft blue card color */
+    --input-bg: rgba(255, 255, 255, 0.4);
+    --input-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.1);
+    --btn-dark: #1a1a1a;      /* Matching the 'Register' button in image 2 */
+    --text-color: #333;
+  }
+
+  .registration-page {
+    background-color: var(--bg-light-blue);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .glass-card {
+    background-color: var(--card-blue);
+    width: 100%;
+    max-width: 500px;
+    padding: 40px;
+    border-radius: 40px; /* Deep rounded corners from your image */
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  }
+
+  .glass-card h2 {
+    text-align: center;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 30px;
+    font-size: 2rem;
+  }
+
+  .form-group-custom {
+    margin-bottom: 18px;
+  }
+
+  .form-group-custom label {
+    display: block;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 8px;
+    margin-left: 5px;
+  }
+
+  /* Inset shadow inputs matching your reference image */
+  .form-group-custom input,
+  .form-group-custom select {
+    width: 100%;
+    padding: 14px 20px;
+    border-radius: 15px; /* Matches the input rounding in image 2 */
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: #ffffff; /* Using white for registration fields for clarity */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    font-size: 1rem;
+    color: #444;
+    transition: 0.3s;
+  }
+
+  /* Focus effect */
+  .form-group-custom input:focus,
+  .form-group-custom select:focus {
+    outline: none;
+    border-color: #999;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+
+  /* Dark button matching the 'Register' image */
+  .btn-register {
+    background-color: var(--btn-dark);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 16px;
+    width: 100%;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+  }
+
+  .btn-register:hover {
+    background-color: #333;
+    transform: translateY(-2px);
+  }
+
+  .terms-check {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 10px;
+  }
+
+  .terms-check input {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+  }
+
+  .footer-text {
+    text-align: center;
+    margin-top: 25px;
+    color: #555;
+  }
+
+  .footer-text a {
+    color: var(--btn-dark);
+    font-weight: 700;
+    text-decoration: none;
+  }
+</style>
+
+<div class="registration-page">
+  <div class="glass-card">
+    <h2>Registration</h2>
+
+    <form action="/staff/" method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+
+      <div class="form-group-custom">
+        <label>Full Name</label>
+        <input type="text" name="nam" required>
+      </div>
+
+      <div class="form-group-custom">
+        <label>Email Address</label>
+        <input type="email" name="mail" required>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 form-group-custom">
+          <label>Password</label>
+          <input type="password" name="pass" required>
+        </div>
+        <div class="col-md-6 form-group-custom">
+          <label>Phone Number</label>
+          <input type="tel" name="phon" required>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 form-group-custom">
+          <label>Position</label>
+          <select name="role" required>
+            <option value="" disabled selected>Select Role</option>
+            <option value="Barista">Barista</option>
+            <option value="Chef">Chef</option>
+            <option value="Waiter">Waiter</option>
+          </select>
+        </div>
+        <div class="col-md-6 form-group-custom">
+          <label>Preferred Shift</label>
+          <select name="shift" required>
+            <option value="" disabled selected>Select Shift</option>
+            <option value="Morning">Morning</option>
+            <option value="Evening">Evening</option>
+            <option value="Night">Night</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="terms-check">
+        <input type="checkbox" id="terms" required>
+        <label for="terms">I agree to the Terms and Conditions</label>
+      </div>
+
+      <button type="submit" class="btn-register">Register</button>
+
+      <div class="footer-text">
+        Already have an account? <a href="/login/">Login</a>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

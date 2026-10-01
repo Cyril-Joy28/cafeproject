@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<style>
+  :root {
+    --page-bg: #f5ebe4;
+    --white-card: #ffffff;
+    --inner-form-bg: #f5ebe4;
+    --input-bg: #ede0d4;
+    --accent-brown: #b06d51;
+    --divider-line: #d2b4a0;
+  }
+
+  body {
+    background-color: var(--page-bg);
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .form-white-wrapper {
+    background: var(--white-card);
+    border-radius: 30px;
+    padding: 30px;
+    max-width: 500px;
+    margin: 40px auto;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--accent-brown);
+  }
+
+  /* Shared style for all inputs */
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    background-color: var(--input-bg);
+    border: none;
+    border-radius: 12px;
+    padding: 14px;
+    margin-bottom: 15px;
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  input:focus {
+    outline: none;
+    box-shadow: 0 0 8px rgba(142, 86, 65, 0.4);
+  }
+
+  .btn-reserve {
+    background: var(--accent-brown);
+    color: #fff;
+    font-weight: 600;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  .btn-reserve:hover {
+    background: #8e5641;
+    transform: translateY(-2px);
+  }
+</style>
+
+<div class="form-white-wrapper">
+  <h2>Signup Form</h2>
+  <form action="/signup/" method="post">
+     {% csrf_token %}
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="uname" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="mail" required>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="pass" required>
+
+    <button type="submit" class="btn-reserve">Sign Up</button>
+  </form>
+</div>
+
+{% endblock %}
