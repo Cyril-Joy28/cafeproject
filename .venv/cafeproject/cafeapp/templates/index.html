@@ -1,0 +1,1501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <title>The Bistro Spoon - Fine Dining Restaurant</title>
+</head>
+<body>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {% load static %}
+
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>The Bistro Spoon - Fine Dining Restaurant</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css'  %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css'  %}" rel="stylesheet">
+
+
+ <!-- Main CSS File -->
+  <link href="{% static 'assets/css/main.css'  %}" rel="stylesheet">
+
+ <!-- =======================================================
+* App Name: The Bistro Spoon Web App
+* Project URL: http://127.0.0.1:8000/
+* Based on Template: Platia by BootstrapMade
+* Template URL: https://bootstrapmade.com/platia-bootstrap-restaurant-template/
+* Author: BootstrapMade.com
+* License: https://bootstrapmade.com/license/
+======================================================== -->
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header fixed-top">
+
+    <div class="branding d-flex align-items-cente">
+
+      <div class="container position-relative d-flex align-items-center justify-content-between">
+        <a href="/" class="logo d-flex align-items-center">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <!-- <img src="assets/img/logo.webp" alt=""> -->
+          <h1 class="sitename">The Bistro Spoon</h1>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="/" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="/#book-a-table">Book a table</a><li>
+            <li><a href="/login/">Login</a><li>
+            <li><a href="#chefs">Chefs</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+      <div class="hero-background">
+        <video autoplay="" muted="" loop="" playsinline="">
+          <source src="{% static 'assets/img/restaurant/video-4.mp4' %}" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+      </div>
+
+      <div class="container hero-content">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="hero-text" data-aos="fade-up" data-aos-delay="100">
+              <span class="tagline">Experience Culinary Excellence</span>
+              <h1 class="hero-title">Savor Every Moment at The Bistro Spoon</h1>
+              <p class="hero-description">Indulge in authentic Italian cuisine crafted with passion and the finest ingredients. From traditional recipes passed down through generations to innovative culinary creations, we offer an unforgettable dining experience.</p>
+
+              <div class="hero-actions" data-aos="fade-up" data-aos-delay="200">
+                <a href="#menu" class="btn btn-outline">View Menu</a>
+              </div>
+
+              <div class="hero-features" data-aos="fade-up" data-aos-delay="300">
+                <div class="feature-item">
+                  <i class="bi bi-clock"></i>
+                  <div class="feature-text">
+                    <span class="label">Open Daily</span>
+                    <span class="value">11:00 AM - 11:00 PM</span>
+                  </div>
+                </div>
+                <div class="feature-item">
+                  <i class="bi bi-geo-alt"></i>
+                  <div class="feature-text">
+                    <span class="label">Location</span>
+                    <span class="value">Evergreen USA</span>
+                  </div>
+                </div>
+                <div class="feature-item">
+                  <i class="bi bi-telephone"></i>
+                  <div class="feature-text">
+                    <span class="label">Reservations</span>
+                    <span class="value">+1 (212) 555-7890</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="400">
+        <div class="scroll-text">Scroll to Explore</div>
+        <div class="scroll-arrow">
+          <i class="bi bi-chevron-down"></i>
+        </div>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <span class="description-title">&nbsp;About</span>
+        <h2>About</h2>
+        <p>
+          <strong>Discover the perfect blend of rich flavors and warm hospitality at The Bistro Spoon,</strong><br>
+          <strong>where every dish is crafted with care to offer an unforgettable dining experience.</strong>
+        </p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-6" data-aos="fade-up">
+            <div class="about-content">
+              <h2>Experience Our Unique Approach</h2>
+              <p class="fst-italic">
+                <strong>"Good food brings people together, but great coffee makes them stay."</strong>
+              </p>
+              <p>At The Bistro Spoon, we take pride in serving freshly brewed coffee, artisanal pastries, and delicious meals made from locally sourced ingredients. Whether you are here for a quick morning espresso or a relaxed evening dinner, we offer a cozy atmosphere to fuel your day.</p>
+              <div class="row mt-4">
+                <div class="col-md-6">
+                  <div class="feature-item" data-aos="fade-up" data-aos-delay="150">
+                    <i class="bi bi-award"></i>
+                    <h4>Exceptional Service</h4>
+                    <p>Our dedicated team is committed to providing warm hospitality and an exceptional dining experience for every guest.</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
+                    <i class="bi bi-trophy"></i>
+                    <h4>Industry Recognition</h4>
+                    <p>Proudly recognized for our culinary excellence and outstanding commitment to food quality and customer satisfaction.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="signature mt-4" data-aos="fade-up" data-aos-delay="250">
+                <p class="chef-name">Jane Smith, Head of Operations</p>
+                <img src="{% static 'assets/img/misc/signature-1.webp' %}" alt="Chef Signature" class="img-fluid">
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="about-gallery">
+              <div class="row g-3">
+                <div class="col-6">
+                  <img src="{% static 'assets/img/restaurant/showcase-3.webp' %}" class="img-fluid rounded" alt="Restaurant Image">
+                </div>
+                <div class="col-6">
+                  <img src="{% static 'assets/img/restaurant/showcase-8.webp' %}" class="img-fluid rounded" alt="Restaurant Image">
+                </div>
+                <div class="col-12 mt-3">
+                  <div class="years-badge">
+                    <span class="number">18</span>
+                    <span class="text">Years of Dedication</span>
+                  </div>
+                  <img src="{% static 'assets/img/restaurant/showcase-6.webp' %}" class="img-fluid rounded" alt="Restaurant Image">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <span class="description-title">Menu</span>
+        <h2>Menu</h2>
+        <p>Delivering fresh ingredients, exquisite recipes, and an unbeatable dining ambiance every single day.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+          <div class="menu-filters isotope-filters mb-5" data-aos="fade-up" data-aos-delay="200">
+            <ul>
+              <li data-filter="*" class="filter-active">All Dishes</li>
+              <li data-filter=".filter-starters">Appetizers</li>
+              <li data-filter=".filter-main">Entrees</li>
+              <li data-filter=".filter-dessert">Sweet Treats</li>
+              <li data-filter=".filter-drinks">Beverages</li>
+            </ul>
+          </div>
+
+          <div class="menu-grid isotope-container row gy-5" data-aos="fade-up" data-aos-delay="300">
+            <div class="col-xl-4 col-lg-6 isotope-item filter-starters">
+              <div class="menu-card">
+                <div class="menu-card-image">
+                  <img src="{% static 'assets/img/restaurant/starter-1.webp' %}" alt="Appetizer" class="img-fluid">
+                  <div class="dietary-badges">
+                    <span class="badge-vegetarian">V</span>
+                  </div>
+                  <div class="price-overlay">$12.50</div>
+                </div>
+                <div class="menu-card-content">
+                  <h4>Prosciutto-Wrapped Asparagus</h4>
+                  <p>Vivamus tempor magna et tempus elementum. Sed consequat libero vel mauris cursus.</p>
+                  <div class="spice-level">
+                    <span class="spice-dot"></span>
+                    <span class="spice-dot"></span>
+                    <span class="spice-dot active"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-4 col-lg-6 isotope-item filter-starters">
+              <div class="menu-card">
+                <div class="menu-card-image">
+                  <img src="{% static 'assets/img/restaurant/starter-3.webp' %}" alt="Appetizer" class="img-fluid">
+                  <div class="dietary-badges">
+                    <span class="badge-seafood">SF</span>
+                  </div>
+                  <div class="price-overlay">$14.95</div>
+                </div>
+                <div class="menu-card-content">
+                  <h4>Seared Scallops with Cauliflower</h4>
+                  <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac.</p>
+                  <div class="spice-level">
+                    <span class="spice-dot active"></span>
+                    <span class="spice-dot"></span>
+                    <span class="spice-dot"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-4 col-lg-6 isotope-item filter-main">
+              <div class="menu-card featured">
+                <div class="menu-card-image">
+                  <img src="{% static 'assets/img/restaurant/main-2.webp' %}" alt="Main Course" class="img-fluid">
+                  <div class="dietary-badges">
+                    <span class="badge-chef">Chef's Choice</span>
+                  </div>
+                  <div class="price-overlay">$28.00</div>
+                </div>
+                <div class="menu-card-content">
+                  <h4>Herb-Crusted Rack of Lamb</h4>
+                  <p>Mauris auctor nulla et felis tempor, eu consectetur ante vulputate non.</p>
+                  <div class="spice-level">
+                    <span class="spice-dot active"></span>
+                    <span class="spice-dot active"></span>
+                    <span class="spice-dot"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-4 col-lg-6 isotope-item filter-main">
+              <div class="menu-card">
+                <div class="menu-card-image">
+                  <img src="{% static 'assets/img/restaurant/main-6.webp' %}" alt="Main Course" class="img-fluid">
+                  <div class="dietary-badges">
+                    <span class="badge-vegetarian">V</span>
+                    <span class="badge-gluten-free">GF</span>
+                  </div>
+                  <div class="price-overlay">$22.75</div>
+                </div>
+                <div class="menu-card-content">
+                  <h4>Quinoa Stuffed Bell Peppers</h4>
+                  <p>Donec vel nunc non erat vehicula cursus. Integer pharetra mauris vel lorem.</p>
+                  <div class="spice-level">
+                    <span class="spice-dot active"></span>
+                    <span class="spice-dot"></span>
+                    <span class="spice-dot"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-4 col-lg-6 isotope-item filter-dessert">
+              <div class="menu-card">
+                <div class="menu-card-image">
+                  <img src="{% static 'assets/img/restaurant/dessert-4.webp' %}" alt="Dessert" class="img-fluid">
+                  <div class="dietary-badges">
+                    <span class="badge-signature">Signature</span>
+                  </div>
+                  <div class="price-overlay">$11.25</div>
+                </div>
+                <div class="menu-card-content">
+                  <h4>Salted Caramel Cheesecake</h4>
+                  <p>Cras fermentum odio eu feugiat luctus. Aliquam erat volutpat sed bibendum.</p>
+                  <div class="spice-level">
+                    <span class="spice-dot"></span>
+                    <span class="spice-dot"></span>
+                    <span class="spice-dot"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-4 col-lg-6 isotope-item filter-dessert">
+              <div class="menu-card">
+                <div class="menu-card-image">
+                  <img src="{% static 'assets/img/restaurant/dessert-9.webp' %}" alt="Dessert" class="img-fluid">
+                  <div class="dietary-badges">
+                    <span class="badge-vegan">VG</span>
+                  </div>
+                  <div class="price-overlay">$9.50</div>
+                </div>
+                <div class="menu-card-content">
+                  <h4>Dark Chocolate Avocado Mousse</h4>
+                  <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere.</p>
+                  <div class="spice-level">
+                    <span class="spice-dot"></span>
+                    <span class="spice-dot"></span>
+                    <span class="spice-dot"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-4 col-lg-6 isotope-item filter-drinks">
+              <div class="menu-card">
+                <div class="menu-card-image">
+                  <img src="{% static 'assets/img/restaurant/drink-2.webp' %}" alt="Beverage" class="img-fluid">
+                  <div class="dietary-badges">
+                    <span class="badge-alcoholic">21+</span>
+                  </div>
+                  <div class="price-overlay">$15.00</div>
+                </div>
+                <div class="menu-card-content">
+                  <h4>Elderflower Gin Fizz</h4>
+                  <p>Nulla facilisi morbi tempus iaculis urna id volutpat lacus laoreet non.</p>
+                  <div class="spice-level">
+                    <span class="spice-dot"></span>
+                    <span class="spice-dot"></span>
+                    <span class="spice-dot"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-4 col-lg-6 isotope-item filter-drinks">
+              <div class="menu-card">
+                <div class="menu-card-image">
+                  <img src="{% static 'assets/img/restaurant/drink-6.webp' %}" alt="Beverage" class="img-fluid">
+                  <div class="dietary-badges">
+                    <span class="badge-fresh">Fresh</span>
+                  </div>
+                  <div class="price-overlay">$8.75</div>
+                </div>
+                <div class="menu-card-content">
+                  <h4>Tropical Green Smoothie</h4>
+                  <p>Ut pharetra sit amet aliquam id diam maecenas ultricies mi eget mauris.</p>
+                  <div class="spice-level">
+                    <span class="spice-dot"></span>
+                    <span class="spice-dot"></span>
+                    <span class="spice-dot"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="menu-actions" data-aos="fade-up" data-aos-delay="400">
+          <div class="row align-items-center">
+            <div class="col-md-8">
+            </div>
+          </div>
+        </div>
+        <div class="chef-recommendations" data-aos="fade-up" data-aos-delay="500">
+          <div class="section-header">
+            <h3><i class="bi bi-star-fill"></i> Today's Chef Recommendations</h3>
+            <p>Carefully curated dishes featuring the finest seasonal ingredients</p>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-lg-6">
+              <div class="recommendation-card">
+                <div class="recommendation-image">
+                  <img src="{% static 'assets/img/restaurant/main-9.webp' %}" alt="Chef Recommendation" class="img-fluid">
+                  <div class="chef-badge">
+                    <i class="bi bi-award"></i>
+                    <span>Chef's Pick</span>
+                  </div>
+                </div>
+                <div class="recommendation-content">
+                 <div class="recommendation-header">
+                   <h4>Pan-Seared Duck Breast</h4>
+                   <div class="recommendation-price">$34.50</div>
+                 </div>
+                  <p>Tender pan-seared duck breast cooked to perfection, served with a rich cherry port reduction and roasted seasonal vegetables.</p>
+                  <div class="recommendation-details">
+                    <div class="serving-info">
+                      <i class="bi bi-clock"></i>
+                      <span>25 min preparation</span>
+                    </div>
+                    <div class="dietary-info">
+                      <span class="mini-badge gluten-free">GF</span>
+                      <span class="mini-badge dairy-free">DF</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="recommendation-card">
+                <div class="recommendation-image">
+                  <img src="{% static 'assets/img/restaurant/main-8.webp' %}" alt="Chef Recommendation" class="img-fluid">
+                  <div class="chef-badge">
+                    <i class="bi bi-award"></i>
+                    <span>Chef's Pick</span>
+                  </div>
+                </div>
+                <div class="recommendation-content">
+                  <div class="recommendation-header">
+                    <h4>Lobster Thermidor Risotto</h4>
+                    <div class="recommendation-price">$39.95</div>
+                  </div>
+                  <p>Creamy Arborio rice folded with succulent lobster meat, white wine, herbs, and topped with a delicate Thermidor sauce crust.</p>
+                  <div class="recommendation-details">
+                    <div class="serving-info">
+                      <i class="bi bi-clock"></i>
+                      <span>30 min preparation</span>
+                    </div>
+                    <div class="dietary-info">
+                      <span class="mini-badge seafood">SF</span>
+                      <span class="mini-badge premium">Premium</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </section><!-- /Menu Section -->
+    <section id="book-a-table" class="book-a-table">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+
+        <div class="col-lg-5">
+          <div class="form-white-wrapper">
+            <div class="reservation-form-section">
+              <div class="form-header text-center mb-4">
+                <h3 style="font-family: 'Playfair Display';">Make a Reservation</h3>
+                <p class="text-muted small">Join us for an unforgettable culinary journey.</p>
+              </div>
+
+              <form action="/book/" method="post">
+                {% csrf_token %}
+                <div class="row gy-3">
+                  <div class="col-12"><input type="text" name="nam" class="form-control" placeholder="Full Name" required></div>
+                  <div class="col-12"><input type="email" name="mail" class="form-control" placeholder="Email Address" required></div>
+                  <div class="col-12"><input type="tel" name="phon" class="form-control" placeholder="Phone Number" required></div>
+
+                  <div class="col-6"><input type="date" name="date" class="form-control" required></div>
+                  <div class="col-6"><input type="time" name="time" class="form-control" required></div>
+
+                  <div class="col-6">
+                    <select name="seating" class="form-select" required>
+                      <option value="" selected disabled>Seating Area</option>
+                      <option value="Indoor Main Hall">Indoor Main Hall</option>
+                      <option value="Terrace Garden">Terrace Garden</option>
+                      <option value="Private Booth">Private Booth</option>
+                      <option value="Window Side">Window Side</option>
+                      <option value="Bar Seating">Bar Seating</option>
+                    </select>
+                  </div>
+                  <div class="col-6">
+                    <select name="people" class="form-select" required>
+                      <option value="" selected disabled>Guests</option>
+                      <option value="1">1 Guest</option>
+                      <option value="2">2 Guests</option>
+                      <option value="3">3 Guests</option>
+                      <option value="4">4 Guests</option>
+                      <option value="5">5+ Guests</option>
+                    </select>
+                  </div>
+
+                  <div class="col-12">
+                    <select name="occasion" class="form-select">
+                      <option value="" selected disabled>Occasion</option>
+                      <option value="birthday">Birthday</option>
+                      <option value="anniversary">Anniversary</option>
+                      <option value="business">Business Dinner</option>
+                      <option value="date">Date Night</option>
+                      <option value="celebration">Celebration</option>
+                    </select>
+                  </div>
+
+                  <div class="col-12">
+                    <textarea class="form-control" name="message" rows="3" placeholder="Special requests..."></textarea>
+                  </div>
+                </div>
+
+                <button type="submit" class="btn-reserve w-100 mt-4">
+                  <i class="bi bi-calendar-check me-2"></i> Reserve Table
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-7" data-aos="fade-left" data-aos-delay="300">
+          <div class="reservation-info-section">
+            <div class="hero-image">
+              <img src="{% static 'assets/img/restaurant/showcase-2.webp' %}" alt="Dining">
+                <div class="overlay-content">
+                <h4 style=>Experience Fine Dining</h4>
+                <p class="small mb-0">Discover a world of flavors curated by our chefs.</p>
+              </div>
+            </div>
+            <div class="info-cards">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <div class="info-card">
+                    <div class="card-icon"><i class="bi bi-clock"></i></div>
+                    <h6>Business Hours</h6>
+                    <p>Tuesday - Thursday: 5:00 PM - 10:00 PM<br>
+                                Friday - Saturday: 5:00 PM - 11:00 PM<br>
+                                Sunday: 4:00 PM - 9:00 PM<br>
+                                <em>Closed Mondays</em>
+                              </p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="info-card">
+                    <div class="card-icon"><i class="bi bi-geo-alt"></i></div>
+                    <h6>Find Us</h6>
+                    <p class="small text-muted mb-0">Evergreen USA</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="info-card">
+                    <div class="card-icon"><i class="bi bi-telephone"></i></div>
+                    <h6>Reservations</h6>
+                    <p>+1 (212) 555-7890<br>
+                    <small>Available daily 2:00 PM - 9:00 PM</small>
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="info-card">
+                    <div class="card-icon"><i class="bi bi-envelope"></i></div>
+                    <h6>Email Us</h6>
+                    <p>info@bistrospoon.com<br>
+                      <small>Response within 24 hours</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section light-background">
+
+  <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <span class="description-title">Testimonials</span>
+        <h2>Testimonials</h2>
+        <p>Read what our valued guests have to say about their dining experience at The Bistro Spoon.</p>
+      </div><!-- End Section Title -->
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="testimonials-14 swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+        {
+          "loop": true,
+          "speed": 600,
+          "autoplay": {
+            "delay": 5000
+          },
+          "slidesPerView": 3,
+          "spaceBetween": 24,
+          "pagination": {
+            "el": ".swiper-pagination",
+            "type": "bullets",
+            "clickable": true
+          },
+          "breakpoints": {
+            "320": {
+              "slidesPerView": 1,
+              "spaceBetween": 16
+            },
+            "768": {
+              "slidesPerView": 2,
+              "spaceBetween": 24
+            },
+            "1200": {
+              "slidesPerView": 3,
+              "spaceBetween": 24
+            }
+          }
+        }
+          </script>
+
+          <div class="swiper-wrapper">
+            <!-- Testimonial Item 1 -->
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                </div>
+                <p>The Bistro Spoon is my absolute favorite spot in town! The steak was cooked to absolute perfection, and the ambiance made our anniversary celebration truly memorable.</p>
+                <div class="profile">
+                  <img src="{% static 'assets/img/person/person-m-9.webp' %}" class="testimonial-img" alt="" loading="lazy">
+                  <div class="info">
+                    <h4>Marcus Chen <i class="bi bi-patch-check-fill"></i></h4>
+                    <span>@marcuschen</span>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End testimonial item --><!-- Testimonial Item 2 -->
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                </div>
+                <p>Exceptional service from the moment we walked in. The coffee was rich and smooth, and the desserts were unbelievably delicious. Highly recommended for any food lover!</p>
+                <div class="profile">
+                  <img src="{% static 'assets/img/person/person-f-5.webp' %}" class="testimonial-img" alt="" loading="lazy">
+                  <div class="info">
+                    <h4>Sarah Mitchell <i class="bi bi-patch-check-fill"></i></h4>
+                    <span>@sarahmitch</span>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+            <!-- Testimonial Item 3 -->
+            <div class="swiper-slide">
+              <div class="testimonial-item"><div class="stars">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div><p>A wonderful culinary experience! The ingredients are fresh, the flavors are rich, and the staff is incredibly polite and attentive. I will definitely be back soon.</p>
+                <div class="profile">
+                  <img src="{% static 'assets/img/person/person-f-12.webp' %}" class="testimonial-img" alt="" loading="lazy">
+                  <div class="info">
+                    <h4>James Wilson <i class="bi bi-patch-check-fill"></i></h4>
+                    <span>@jwilson</span>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+            <!-- Testimonial Item 4 -->
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                </div>
+                <p>Loved the warm and cozy ambiance! The brunch menu has great options, and the salted caramel cheesecake is hands down the best I have ever tasted in the city.</p>
+                <div class="profile">
+                  <img src="{% static 'assets/img/person/person-m-12.webp' %}" class="testimonial-img" alt="" loading="lazy">
+                  <div class="info">
+                    <h4>Emma Rodriguez <i class="bi bi-patch-check-fill"></i></h4>
+                    <span>@emmarod</span>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+            <!-- Testimonial Item 5 -->
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                </div>
+                <p>Great food, reasonable pricing, and a cozy aesthetic. Perfect spot for team lunches as well as casual family dinners. I loved every single dish we ordered!</p>
+                <div class="profile">
+                  <img src="{% static 'assets/img/person/person-m-13.webp' %}" class="testimonial-img" alt="" loading="lazy">
+                  <div class="info">
+                    <h4>David Kumar <i class="bi bi-patch-check-fill"></i></h4>
+                    <span>@davidkumar</span>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <!-- Testimonial Item 6 -->
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                </div>
+                <p>The presentation of the food was top-tier, and the flavors were balanced nicely. Fantastic place to hang out with friends for coffee and mocktails.</p>
+                <div class="profile">
+                  <img src="{% static 'assets/img/person/person-f-13.webp' %}" class="testimonial-img" alt="" loading="lazy">
+                  <div class="info">
+                    <h4>Sophia Lee <i class="bi bi-patch-check-fill"></i></h4>
+                    <span>@sophialee</span>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+          </div>
+
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section><!-- /Testimonials Section -->
+
+    <!-- Chefs Section -->
+    <section id="chefs" class="chefs section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <span class="description-title">Chefs</span>
+        <h2>Chefs</h2>
+        <p>Meet the culinary masterminds behind The Bistro Spoon, crafting every dish with passion and expertise.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="featured-chef row align-items-center g-4" data-aos="fade-up" data-aos-delay="150">
+          <div class="col-lg-5">
+            <figure class="chef-photo m-0">
+              <img src="{% static 'assets/img/restaurant/chef-4.webp' %}" alt="Executive chef portrait" class="img-fluid">
+              <div class="badge-overlay">
+                <span class="pill"><i class="bi bi-star-fill me-1"></i> Michelin Mention</span>
+              </div>
+            </figure>
+          </div>
+
+          <div class="col-lg-7">
+            <div class="chef-content">
+             <div class="topline d-inline-flex align-items-center mb-2">
+               <i class="bi bi-patch-check-fill me-2"></i>
+               <span>Featured Chef</span>
+             </div>
+              <h3 class="name">Avery Montrose</h3>
+              <p class="role mb-3">Executive Chef</p>
+              <p class="bio mb-4">With over 15 years of international culinary experience, Chef Avery brings a creative vision to The Bistro Spoon, blending classic techniques with modern flavors to create memorable dining experiences.</p>
+
+              <ul class="awards list-unstyled d-flex flex-wrap gap-2 mb-4">
+                <li class="award-badge"><i class="bi bi-award me-1"></i> Gourmand Trophy 2022</li>
+                <li class="award-badge"><i class="bi bi-bookmark-star me-1"></i> Le Cordon Bleu Honors</li>
+                <li class="award-badge"><i class="bi bi-trophy me-1"></i> City Best Tasting Menu</li>
+              </ul>
+
+              <div class="signature">
+                <img src="{% static 'assets/img/misc/signature-1.webp' %}" alt="Chef signature" class="img-fluid">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-4 team-grid mt-2">
+
+          <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
+            <article class="chef-card h-100">
+              <div class="image-wrapper">
+                <img src="{% static 'assets/img/restaurant/chef-1.webp' %}" alt="Sous chef portrait" class="img-fluid" loading="lazy">
+                <ul class="social list-unstyled m-0">
+                  <li><a aria-label="Instagram"><i class="bi bi-instagram"></i></a></li>
+                  <li><a aria-label="Twitter"><i class="bi bi-twitter-x"></i></a></li>
+                  <li><a aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a></li>
+                </ul>
+              </div>
+              <div class="content p-3">
+                <h4 class="name mb-1">Jordan Lee</h4>
+                <p class="role mb-2">Sous Chef</p>
+                <p class="excerpt mb-3">Specializing in innovative recipe development and kitchen management, Jordan ensures every dish meets our highest quality standards.</p>
+                <div class="badges d-flex flex-wrap gap-2">
+                  <span class="mini-badge"><i class="bi bi-award me-1"></i> Street Food Fest</span>
+                </div>
+              </div>
+            </article>
+          </div><!-- End Chef Card -->
+
+          <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="250">
+            <article class="chef-card h-100">
+              <div class="image-wrapper">
+                <img src="{% static 'assets/img/restaurant/chef-6.webp' %}" alt="Pastry chef portrait" class="img-fluid" loading="lazy">
+                <ul class="social list-unstyled m-0">
+                  <li><a aria-label="Instagram"><i class="bi bi-instagram"></i></a></li>
+                  <li><a aria-label="Facebook"><i class="bi bi-facebook"></i></a></li>
+                  <li><a aria-label="Pinterest"><i class="bi bi-pinterest"></i></a></li>
+                </ul>
+              </div>
+              <div class="content p-3">
+                <h4 class="name mb-1">Mila Santos</h4>
+                <p class="role mb-2">Pastry Chef</p>
+                <p class="excerpt mb-3">Passionate about creating exquisite desserts and fresh artisanal pastries that deliver a perfect balance of sweetness and texture.</p>
+                <div class="badges d-flex flex-wrap gap-2">
+                  <span class="mini-badge"><i class="bi bi-egg-fried me-1"></i> Cocoa Summit</span>
+                </div>
+              </div>
+            </article>
+          </div><!-- End Chef Card -->
+
+          <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
+            <article class="chef-card h-100">
+              <div class="image-wrapper">
+                <img src="{% static 'assets/img/restaurant/chef-8.webp' %}" alt="Grill chef portrait" class="img-fluid" loading="lazy">
+                <ul class="social list-unstyled m-0">
+                  <li><a aria-label="Instagram"><i class="bi bi-instagram"></i></a></li>
+                  <li><a aria-label="TikTok"><i class="bi bi-tiktok"></i></a></li>
+                  <li><a aria-label="YouTube"><i class="bi bi-youtube"></i></a></li>
+                </ul>
+              </div>
+              <div class="content p-3">
+                <h4 class="name mb-1">Kai Thompson</h4>
+                <p class="role mb-2">Grill Master</p>
+                <p class="excerpt mb-3">Mastering the art of flame-grilled perfection, Kai crafts smoky, tender meats and seafood infused with signature house blend spices.</p>
+                <div class="badges d-flex flex-wrap gap-2">
+                  <span class="mini-badge"><i class="bi bi-fire me-1"></i> Smoke-Off Winner</span>
+                </div>
+              </div>
+            </article>
+          </div><!-- End Chef Card -->
+
+          <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="350">
+            <article class="chef-card h-100">
+              <div class="image-wrapper">
+                <img src="{% static 'assets/img/restaurant/chef-3.webp' %}" alt="Line cook portrait" class="img-fluid" loading="lazy">
+                <ul class="social list-unstyled m-0">
+                  <li><a aria-label="Instagram"><i class="bi bi-instagram"></i></a></li>
+                  <li><a aria-label="Twitter"><i class="bi bi-twitter-x"></i></a></li>
+                  <li><a aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a></li>
+                </ul>
+              </div>
+              <div class="content p-3">
+                <h4 class="name mb-1">Renee Collins</h4>
+                <p class="role mb-2">Line Cook</p>
+                <p class="excerpt mb-3">Dedicated to speed and precision in the kitchen, Renee ensures every plate is cooked evenly and presented beautifully.</p>
+                <div class="badges d-flex flex-wrap gap-2">
+                  <span class="mini-badge"><i class="bi bi-emoji-smile me-1"></i> Guest Favorite</span>
+                </div>
+              </div>
+            </article>
+          </div><!-- End Chef Card -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Chefs Section -->
+
+    <!-- Events Section -->
+    <section id="events" class="events section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <span class="description-title">Events</span>
+        <h2>Events</h2>
+        <p>Host your private parties, corporate gatherings, and special celebrations with us for an unforgettable culinary experience.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center" data-aos="fade-up" data-aos-delay="150">
+            <div class="seasonal-hero">
+              <span class="seasonal-badge">Limited Time</span>
+              <h2>Autumn Harvest Festival</h2>\
+              <p>Join us in celebrating the rich flavors of autumn with our specially curated seasonal menu, featuring fresh local ingredients and unique culinary creations.</p>
+              <div class="festival-dates">
+                <i class="bi bi-calendar-event"></i>
+                <span>October 15 - November 30</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-4 mb-5" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-6" data-aos="slide-right" data-aos-delay="250">
+            <div class="feature-card primary">
+              <div class="feature-visual">
+                <img src="{% static 'assets/img/restaurant/misc-3.webp' %}" alt="Special Menu" class="img-fluid">
+                <div class="feature-badge">
+                  <i class="bi bi-star-fill"></i>
+                  <span>Chef's Special</span>
+                </div>
+              </div>
+             <div class="feature-content">
+               <h3>Seasonal Harvest Menu</h3>
+               <p>Experience the unique flavor of our dishes, prepared daily with the freshest local ingredients.</p>
+               <div class="feature-highlights">
+                 <div class="highlight-item">
+                   <i class="bi bi-check-circle-fill"></i>
+                   <span>Farm-to-Table Ingredients</span>
+                 </div>
+                 <div class="highlight-item">
+                   <i class="bi bi-check-circle-fill"></i>
+                   <span>Locally Sourced Produce</span>
+                 </div>
+               </div>
+               <a href="#menu" class="feature-link">Explore Menu <i class="bi bi-arrow-right"></i></a>
+             </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="slide-left" data-aos-delay="300">
+            <div class="feature-card secondary">
+              <div class="feature-visual">
+                <img src="{% static 'assets/img/restaurant/misc-7.webp' %}" alt="Wine Pairing" class="img-fluid">
+                <div class="feature-badge">
+                  <i class="bi bi-award-fill"></i>
+                  <span>Award Winning</span>
+                </div>
+              </div>
+              <div class="feature-content">
+                <h3>Wine Pairing Experience</h3>
+                <p>Indulge in our exquisite wine selection, expertly paired by our sommeliers to complement every flavor of your meal.</p>
+                <div class="feature-highlights">
+                  <div class="highlight-item">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <span>Sommelier Curated</span>
+                  </div>
+                  <div class="highlight-item">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <span>Premium Selection</span>
+                  </div>
+                </div>
+                <a href="#contact" class="feature-link">Book Tasting <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="awards-section" data-aos="fade-up" data-aos-delay="200">
+          <div class="row align-items-center">
+            <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="250">
+              <div class="awards-content">
+                <h3>Recognition &amp; Awards</h3>
+                <p>We are honored to receive these prestigious awards, reflecting our passion for great food and memorable dining experiences.</p>              </div>
+            </div>
+            <div class="col-lg-8" data-aos="fade-left" data-aos-delay="300">
+              <div class="awards-grid">
+                <div class="award-item">
+                  <div class="award-icon">
+                    <i class="bi bi-trophy-fill"></i>
+                  </div>
+                  <div class="award-details">
+                    <h4>Best Restaurant 2024</h4>
+                    <span>City Dining Awards</span>
+                  </div>
+                </div>
+                <div class="award-item">
+                  <div class="award-icon">
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                  <div class="award-details">
+                    <h4>5-Star Rating</h4>
+                    <span>Local Food Guide</span>
+                  </div>
+                </div>
+                <div class="award-item">
+                  <div class="award-icon">
+                    <i class="bi bi-gem"></i>
+                  </div>
+                  <div class="award-details">
+                    <h4>Excellence Award</h4>
+                    <span>Culinary Institute</span>
+                  </div>
+                </div>
+                <div class="award-item">
+                  <div class="award-icon">
+                    <i class="bi bi-heart-fill"></i>
+                  </div>
+                  <div class="award-details">
+                    <h4>Customer Choice</h4>
+                    <span>Community Favorite</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="community-section" data-aos="fade-up" data-aos-delay="200">
+          <div class="row g-4">
+            <div class="col-lg-6" data-aos="fade-right" data-aos-delay="250">
+              <div class="community-card">
+                <div class="community-header">
+                  <div class="community-icon">
+                    <i class="bi bi-people-fill"></i>
+                  </div>
+                  <div>
+                    <h3>Community Involvement</h3>
+                    <p>Supporting local farmers and charities since 2015</p>
+                  </div>
+                </div>
+                <div class="community-stats">
+                  <div class="stat-row">
+                    <div class="stat-item">
+                      <span class="stat-number">$50K+</span>
+                      <span class="stat-label">Donated to Local Charities</span>
+                    </div>
+                    <div class="stat-item">
+                      <span class="stat-number">25+</span>
+                      <span class="stat-label">Local Farm Partners</span>
+                    </div>
+                  </div>
+                  <div class="stat-row">
+                    <div class="stat-item">
+                      <span class="stat-number">100+</span>
+                      <span class="stat-label">Community Events Hosted</span>
+                    </div>
+                    <div class="stat-item">
+                      <span class="stat-number">500+</span>
+                      <span class="stat-label">Volunteer Hours</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
+              <div class="sustainability-card">
+                <div class="sustainability-header">
+                  <div class="sustainability-icon">
+                    <i class="bi bi-recycle"></i>
+                  </div>
+                  <div>
+                    <h3>Eco-Friendly Practices</h3>
+                    <p>Committed to sustainable dining and zero waste</p>
+                  </div>
+                </div>
+                <div class="sustainability-features">
+                  <div class="feature-item">
+                    <i class="bi bi-leaf-fill"></i>
+                    <span>100% Compostable Packaging</span>
+                  </div>
+                  <div class="feature-item">
+                    <i class="bi bi-water"></i>
+                    <span>Water Conservation Program</span>
+                  </div>
+                  <div class="feature-item">
+                    <i class="bi bi-lightning-fill"></i>
+                    <span>Renewable Energy Powered</span>
+                  </div>
+                  <div class="feature-item">
+                    <i class="bi bi-truck"></i>
+                    <span>Local Sourcing Priority</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Events Section -->
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <span class="description-title">Gallery</span>
+        <h2>Gallery</h2>
+        <p>Take a visual tour of our culinary creations, vibrant ambiance, and memorable moments.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+          <ul class="restaurant-gallery-filters isotope-filters mb-4 justify-content-center d-flex gap-2" data-aos="fade-up" data-aos-delay="100">
+            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".filter-food">Food</li>
+            <li data-filter=".filter-drinks">Drinks</li>
+            <li data-filter=".filter-interior">Interior</li>
+            <li data-filter=".filter-staff">Staff</li>
+          </ul>
+
+          <div class="row g-3 isotope-container" data-aos="fade-up" data-aos-delay="200">
+            <div class="col-lg-4 col-md-6 isotope-item filter-food">
+              <figure class="gallery-card">
+                <a href="{% static 'assets/img/restaurant/main-3.webp' %}" class="glightbox" data-gallery="restaurant-gallery">
+                  <img src="{% static 'assets/img/restaurant/main-3.webp' %}" alt="Grilled Salmon" class="img-fluid rounded" loading="lazy">
+                </a>
+                <figcaption class="caption">
+                  <span class="caption-title">Grilled Salmon</span>
+                  <span>Fresh salmon with lemon butter sauce.</span>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="col-lg-4 col-md-6 isotope-item filter-interior">
+              <figure class="gallery-card">
+                <a href="{% static 'assets/img/restaurant/showcase-2.webp' %}" class="glightbox" data-gallery="restaurant-gallery">
+                  <img src="{% static 'assets/img/restaurant/showcase-2.webp' %}" alt="Dining Hall" class="img-fluid rounded" loading="lazy">
+                </a>
+                <figcaption class="caption">
+                  <span class="caption-title">Dining Hall</span>
+                  <span>Spacious, warm and welcoming ambiance.</span>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="col-lg-4 col-md-6 isotope-item filter-staff">
+              <figure class="gallery-card">
+                <a href="{% static 'assets/img/restaurant/chef-5.webp' %}" class="glightbox" data-gallery="restaurant-gallery">
+                  <img src="{% static 'assets/img/restaurant/chef-5.webp' %}" alt="Chef Maria" class="img-fluid rounded" loading="lazy">
+                </a>
+                <figcaption class="caption">
+                  <span class="caption-title">Chef Maria</span>
+                  <span>Our creative chef behind every dish.</span>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="col-lg-4 col-md-6 isotope-item filter-drinks">
+              <figure class="gallery-card">
+                <a href="{% static 'assets/img/restaurant/drink-2.webp' %}" class="glightbox" data-gallery="restaurant-gallery">
+                  <img src="{% static 'assets/img/restaurant/drink-2.webp' %}" alt="Signature Mocktail" class="img-fluid rounded" loading="lazy">
+                </a>
+                <figcaption class="caption">
+                  <span class="caption-title">Signature Mocktail</span>
+                  <span>Vibrant blend of fresh citrus and herbs.</span>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="col-lg-4 col-md-6 isotope-item filter-food">
+              <figure class="gallery-card">
+                <a href="{% static 'assets/img/restaurant/dessert-4.webp' %}" class="glightbox" data-gallery="restaurant-gallery">
+                  <img src="{% static 'assets/img/restaurant/dessert-4.webp' %}" alt="Raspberry Tart" class="img-fluid rounded" loading="lazy">
+                </a>
+                <figcaption class="caption">
+                  <span class="caption-title">Raspberry Tart</span>
+                  <span>Sweet pastry filled with creamy vanilla custard.</span>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="col-lg-4 col-md-6 isotope-item filter-interior">
+              <figure class="gallery-card">
+                <a href="{% static 'assets/img/restaurant/showcase-5.webp' %}" class="glightbox" data-gallery="restaurant-gallery">
+                  <img src="{% static 'assets/img/restaurant/showcase-5.webp' %}" alt="Bar Area" class="img-fluid rounded" loading="lazy">
+                </a>
+                <figcaption class="caption">
+                  <span class="caption-title">Bar Area</span>
+                  <span>Cozy spot for cocktails and good conversation.</span>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="col-lg-4 col-md-6 isotope-item filter-staff">
+              <figure class="gallery-card">
+                <a href="{% static 'assets/img/restaurant/chef-2.webp' %}" class="glightbox" data-gallery="restaurant-gallery">
+                  <img src="{% static 'assets/img/restaurant/chef-2.webp' %}" alt="Sous Chef Daniel" class="img-fluid rounded" loading="lazy">
+                </a>
+                <figcaption class="caption">
+                  <span class="caption-title">Sous Chef Daniel</span>
+                  <span>Expert in modern fusion cuisine.</span>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="col-lg-4 col-md-6 isotope-item filter-drinks">
+              <figure class="gallery-card">
+                <a href="{% static 'assets/img/restaurant/drink-8.webp' %}" class="glightbox" data-gallery="restaurant-gallery">
+                  <img src="{% static 'assets/img/restaurant/drink-8.webp' %}" alt="Classic Espresso" class="img-fluid rounded" loading="lazy">
+                </a>
+                <figcaption class="caption">
+                  <span class="caption-title">Classic Espresso</span>
+                  <span>Rich and aromatic, served to perfection.</span>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="col-lg-4 col-md-6 isotope-item filter-food">
+              <figure class="gallery-card">
+                <a href="{% static 'assets/img/restaurant/main-7.webp' %}" class="glightbox" data-gallery="restaurant-gallery">
+                  <img src="{% static 'assets/img/restaurant/main-7.webp' %}" alt="Beef Fillet" class="img-fluid rounded" loading="lazy">
+                </a>
+                <figcaption class="caption">
+                  <span class="caption-title">Beef Fillet</span>
+                  <span>Tender beef with herb roasted vegetables.</span>
+                </figcaption>
+              </figure>
+            </div>
+          </div><!-- End Gallery Items Container -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Gallery Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <span class="description-title">Contact</span>
+       <h2>Contact Us</h2>
+        <p>Feel free to reach out to us for any inquiries or to reserve your table.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <!-- Contact Info Boxes -->
+        <div class="row gy-4 mb-5">
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="contact-info-box">
+              <div class="icon-box">
+                <i class="bi bi-geo-alt"></i>
+              </div>
+              <div class="info-content">
+                <h4>Our Address</h4>
+                <p>2847 Maple Avenue Los Angeles, CA 90210 United States</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="contact-info-box">
+              <div class="icon-box">
+                <i class="bi bi-envelope"></i>
+              </div>
+              <div class="info-content">
+                <h4>Email Address</h4>
+                <p><p>info@bistrospoon.com</p></p>
+                <p>contact@bistrospoon.com</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="contact-info-box">
+              <div class="icon-box">
+                <i class="bi bi-headset"></i>
+              </div>
+              <div class="info-content">
+                <h4>Hours of Operation</h4>
+                <p>Sunday-Fri: 9 AM - 6 PM</p>
+                <p>Saturday: 9 AM - 4 PM</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Google Maps (Full Width) -->
+      <div class="map-section" data-aos="fade-up" data-aos-delay="200">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48389.78314118045!2d-74.006138!3d40.710059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3bda30d%3A0xb89d1fe6bc499443!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1676961268712!5m2!1sen!2sus" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+      <!-- Contact Form Section (Overlapping) -->
+      <div class="container form-container-overlap">
+        <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="300">
+          <div class="col-lg-10">
+            <div class="contact-form-wrapper">
+              <h2 class="text-center mb-4">Get in Touch</h2>
+
+              <form action="forms/contact.php" method="post" class="php-email-form">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <div class="input-with-icon">
+                        <i class="bi bi-person"></i>
+                        <input type="text" class="form-control" name="name" placeholder="First Name" required="">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <div class="input-with-icon">
+                        <i class="bi bi-envelope"></i>
+                        <input type="email" class="form-control" name="email" placeholder="Email Address" required="">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <div class="input-with-icon">
+                        <i class="bi bi-text-left"></i>
+                        <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <div class="form-group">
+                      <div class="input-with-icon">
+                        <i class="bi bi-chat-dots message-icon"></i>
+                        <textarea class="form-control" name="message" placeholder="Write Message..." style="height: 180px" required=""></textarea>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <div class="loading">Loading</div>
+                    <div class="error-message"></div>
+                    <div class="sent-message">Your message has been sent. Thank you!</div>
+                  </div>
+
+                  <div class="col-12 text-center">
+                    <button type="submit" class="btn btn-primary btn-submit">SEND MESSAGE</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+
+    <div class="container">
+      <div class="row gy-5">
+
+        <div class="col-lg-4">
+          <div class="footer-content">
+            <a href="index.html" class="logo d-flex align-items-center mb-4">
+              <span class="sitename">The Bistro Spoon</span>
+            </a>
+            <p class="mb-4">Welcome to The Bistro Spoon! We offer handcrafted dishes made with fresh, locally sourced ingredients to bring you a warm and unforgettable dining experience.</p>
+            <div class="newsletter-form">
+              <h5>Stay Updated</h5>
+              <form action="forms/newsletter.php" method="post" class="php-email-form">
+                <div class="input-group">
+                  <input type="email" name="email" class="form-control" placeholder="Enter your email" required="">
+                  <button type="submit" class="btn-subscribe">
+                    <i class="bi bi-send"></i>
+                  </button>
+                </div>
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Thank you for subscribing!</div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6">
+          <div class="footer-widget">
+            <h4>Quick Links</h4>
+            <ul class="list-unstyled">
+              <li><a href="#about"><i class="bi bi-chevron-right me-2"></i>About Us</a></li>
+              <li><a href="#menu"><i class="bi bi-chevron-right me-2"></i>Menu</a></li>
+              <li><a href="#contact"><i class="bi bi-chevron-right me-2"></i>Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="footer-contact">
+            <h4>Get in Touch</h4>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="bi bi-geo-alt"></i>
+              </div>
+              <div class="contact-info">
+                <p>2847 Maple Avenue<br>Los Angeles, CA 90210<br>United States</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="bi bi-telephone"></i>
+              </div>
+              <div class="contact-info">
+                <p>+1 (555) 987-6543</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="bi bi-envelope"></i>
+              </div>
+              <div class="contact-info">
+                <p>contact@bistrospoon.com</p>
+              </div>
+            </div>
+
+            <div class="social-links">
+              <a ><i class="bi bi-facebook"></i></a>
+              <a ><i class="bi bi-twitter-x"></i></a>
+              <a ><i class="bi bi-linkedin"></i></a>
+              <a ><i class="bi bi-youtube"></i></a>
+              <a ><i class="bi bi-github"></i></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+   <div class="footer-bottom">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <div class="copyright">
+          <p>© <span>Copyright</span> <strong class="px-1 sitename">The Bistro Spoon</strong> <span>All Rights Reserved</span></p>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+        <div class="credits">
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> | Developed by <strong>Cyril Joy</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'assets/vendor/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+
+  <!-- Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>

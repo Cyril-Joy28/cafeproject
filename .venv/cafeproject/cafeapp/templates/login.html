@@ -1,0 +1,157 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<style>
+  :root {
+    --modal-bg: #c9dce9;
+    --input-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.1);
+    --btn-teal: #1a7e96;
+    --text-main: #333333;
+  }
+
+  /* Full page centering background */
+  .login-page {
+    background: linear-gradient(135deg, #e0f0f7 0%, #b8d4e3 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  /* Main Card Container */
+  .glass-card {
+    background-color: var(--modal-bg);
+    width: 100%;
+    max-width: 450px;
+    padding: 50px 40px;
+    border-radius: 40px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+
+  .glass-card h2 {
+    font-weight: 800;
+    font-size: 2.2rem;
+    color: var(--text-main);
+    margin-bottom: 10px;
+  }
+
+  .glass-card p {
+    color: #555;
+    margin-bottom: 30px;
+  }
+
+  /* Input & Select Styling */
+  .form-group-custom {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+
+  .form-group-custom label {
+    font-size: 0.9rem;
+    color: #555;
+    margin-left: 15px;
+    margin-bottom: 5px;
+    display: block;
+    font-weight: 600;
+  }
+
+  .form-group-custom input,
+  .form-group-custom select {
+    width: 100%;
+    padding: 15px 20px;
+    border-radius: 30px;
+    border: 1px solid rgba(255,255,255,0.5);
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: var(--input-shadow);
+    color: #444;
+    font-size: 1rem;
+    transition: 0.3s;
+  }
+
+  .form-group-custom input:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+
+  /* Teal Button */
+  .btn-login-style {
+    background-color: var(--btn-teal);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 16px;
+    width: 100%;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(26, 126, 150, 0.3);
+  }
+
+  .btn-login-style:hover {
+    background-color: #14667a;
+    transform: translateY(-2px);
+  }
+
+  .login-footer {
+    margin-top: 25px;
+    font-size: 0.95rem;
+    color: #555;
+  }
+
+  .login-footer a {
+    color: var(--btn-teal);
+    text-decoration: none;
+    font-weight: 700;
+  }
+</style>
+
+<div class="login-page">
+  <div class="glass-card">
+    <h2>Login</h2>
+    <p>Please enter your credentials</p>
+
+    <form action="/login/" method="post">
+      {% csrf_token %}
+
+      <div class="form-group-custom">
+        <label>Login As</label>
+        <select name="utype" required>
+          <option value="Staff">Staff</option>
+          <option value="User">User</option>
+        </select>
+      </div>
+
+      <div class="form-group-custom">
+        <label>Username</label>
+        <input type="text" name="uname" placeholder="Enter username" required>
+      </div>
+
+      <div class="form-group-custom">
+        <label>Password</label>
+        <input type="password" name="pwd" placeholder="Enter password" required>
+      </div>
+
+      <button type="submit" class="btn-login-style">Login</button>
+      <div class="login-footer">
+        <p>If not a user? <a href="/signup/">Please Signup</a></p>
+        <p>Staff is new? <a href="/staff/">Staff Registration</a></p>
+      </div>
+
+    </form>
+  </div>
+</div>
+<!-- Logout Popup Message Alert -->
+{% if messages %}
+{% for message in messages %}
+<script>
+  alert("{{ message }}");
+</script>
+{% endfor %}
+{% endif %}
+{% endblock %}
