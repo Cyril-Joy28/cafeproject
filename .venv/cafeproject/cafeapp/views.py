@@ -36,9 +36,15 @@ def bookin(request):
         message = (
             f'Dear {bk.name},\n\n'
             f'Your Reservation has been successfully booked.\n\n'
-            f'Occasion: {bk.occasion} on {bk.date}.\n\n'
+            f'Details:\n'
+            f'Date: {bk.date}\n'
+            f'Time: {bk.time}\n'
+            f'Guests: {bk.people}\n'
+            f'Seating: {bk.seating}\n'
+            f'Occasion: {bk.occasion}'
             'Thank you for choosing The Bistro Spoon Restaurant\n'
-            'Best Regards,\nThe Bistro Spoon Restaurant'
+            'Best Regards,\n'
+            'The Bistro Spoon Restaurant'
         )
         send_mail(subject, message, EMAIL_HOST_USER, [bk.email])
 

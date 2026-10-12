@@ -10,7 +10,7 @@ class booking(models.Model):
     time = models.TimeField()
     seating = models.CharField(max_length=50)
     people = models.IntegerField()
-    occasion = models.CharField(max_length=50)
+    occasion = models.CharField(max_length=100)
     message = models.CharField(max_length=255)
 
 
@@ -21,7 +21,7 @@ class booking(models.Model):
 class Staff(models.Model):
     name = models.CharField(max_length=20)
     email = models.EmailField(max_length=25)
-    phone = models.CharField(max_length=15)    
+    phone = models.CharField(max_length=15)
     password = models.CharField(max_length=20)
     role = models.CharField(max_length=30)
     shift = models.CharField(max_length=30)
