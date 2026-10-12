@@ -41,7 +41,7 @@ def bookin(request):
             f'Time: {bk.time}\n'
             f'Guests: {bk.people}\n'
             f'Seating: {bk.seating}\n'
-            f'Occasion: {bk.occasion}'
+            f'Occasion: {bk.occasion}\n\n'
             'Thank you for choosing The Bistro Spoon Restaurant\n'
             'Best Regards,\n'
             'The Bistro Spoon Restaurant'
